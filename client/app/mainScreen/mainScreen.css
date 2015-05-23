@@ -1,0 +1,39 @@
+.col-md-12 {
+    background-image: url('../../assets/images/recruitment-industry.jpg');
+	height: 100%;
+}
+
+.btn-group{
+	top: 82%;
+    left: 28%;
+}
+
+.Login-screen{
+	position: absolute;
+    height: 30%;
+    width: 50%;
+    top: 30%;
+    left: 28%;
+}
+
+.login{
+	display: none;
+    position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(128, 128, 128, 0.54);
+	z-index: 10;
+}
+
+.title-text{
+	text-align: center;
+    padding-top: 3%;
+    position: absolute;
+    padding-left: 30%;
+	font-size: 80px;
+}
+
+.btn{
+	background-color:aliceblue;
+	color:blue;
+}

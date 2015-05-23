@@ -1,0 +1,50 @@
+.currentTest{
+	display: none;
+}
+
+.FutureTest{
+	display: none;
+}
+
+.PastTest{
+	display: none;
+}
+
+.testPage{
+	display: none;
+}
+
+.boxed {
+    position: fixed;
+    border: 5px solid brown;
+    width: 800px;
+    margin-left: 300px;
+    margin-top: 250px;
+    padding: 20px;
+}
+
+.num{
+    font-weight: bold;
+}
+
+.question{
+    
+}
+
+.options{
+    position: relative;
+    margin-left: 100px;   
+}
+
+.next{
+    font-family: Arial;
+}
+
+.countdown{
+    position: fixed;
+    border: 5px solid green;
+    width: 350px;
+    margin-left: 900px;
+    margin-top: 100px;
+    padding: 20px;
+}

@@ -5,7 +5,8 @@ angular.module('dexterhackHireMeApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'ui.bootstrap'
+  'ui.bootstrap',
+	'FBAngular'
 ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
