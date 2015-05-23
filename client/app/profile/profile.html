@@ -7,10 +7,11 @@
 	<div>
 		<div class="currentTest">
 			You have {{testInformation.testHistory.currentTest.length}} test(s) available.
-			<div ng-repeat="test in testInformation.testHistory.currentTest">
-				<span>Company name</span>
+			<div ng-repeat="test in testInformation.testHistory.currentTest" style="padding:2%;">
+				<span style="font-weight:bolder">Company name</span>
+				<br>
 				<span>{{test.companyName}}</span>
-				<button type="button" ng-click="launchTest()">Launch Test</button>
+				<span style="padding-left: 10%;"><button type="button" ng-click="launchTest()">Launch Test</button></span>
 			</div>
 		</div>
 		<div class="FutureTest">No future tests have been enrolled for</div>
