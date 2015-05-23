@@ -115,7 +115,7 @@ angular.module('dexterhackHireMeApp')
                 }
                 else{
                     stop(function(){
-                        $timeout.flush();
+                        //$timeout.flush();
 					    $scope.exitTest();
                     });
                 }
@@ -132,7 +132,7 @@ angular.module('dexterhackHireMeApp')
             }
             else{
                 stop(function(){
-                    $timeout.flush();
+                    //$timeout.flush();
                     $scope.exitTest();
                 });
             }
