@@ -69,10 +69,16 @@ angular.module('dexterhackHireMeApp')
     }, {
         ques: 'Which algorithm is used to find Minimum Spanning Tree of a graph?',
         opts: ['Dijikstra', 'Kruskal', 'Floyd', 'Marshal']
+    }, {
+        ques: 'Which of the following are not JavaScript test frameworks?',
+        opts: ['Mocha', 'Jasmine', 'Cucumber', 'All of the above']
+    }, {
+        ques: 'Which of the following service is available in angularJS?',
+        opts: ['$http', '$init', '$timeout', '$interval']
     }]
   }};
     
-    var totalQues = 2;
+    var totalQues = $scope.questions.item.questions.length;
     $scope.quesnum = QuestionsService.quesnum + 1;
     $scope.question = $scope.questions.item.questions[QuestionsService.quesnum].ques;
     $scope.options = $scope.questions.item.questions[QuestionsService.quesnum].opts;
