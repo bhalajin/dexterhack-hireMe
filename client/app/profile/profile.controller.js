@@ -86,7 +86,9 @@ angular.module('dexterhackHireMeApp')
     
     $scope.nextQuestion = function(){
         changeQuestion(true);
-    }    
+    }  
+    
+    var mytimeout;
     
     function changeQuestion(flag){
         $scope.countDown = 20;
@@ -94,34 +96,45 @@ angular.module('dexterhackHireMeApp')
             $scope.countDown--;console.log($scope.countDown);
             mytimeout = $timeout(onTimeout,1000);
         }
-        var mytimeout = $timeout(onTimeout,1000);
+        mytimeout = $timeout(onTimeout,1000);
 
-        var stop = function(){
+        var stop = function(callback){
             $timeout.cancel(mytimeout);
+            callback();
         }
         
         if(!flag){
             $timeout(function(){
                 if(QuestionsService.quesnum < totalQues){
                     setQuestion();
-                    stop();console.log('stopped');
-                    changeQuestion();
+                    stop(function(){
+                        $timeout.flush();
+                        console.log('stopped');
+                        changeQuestion();
+                    });
                 }
                 else{
-                    stop();
-					$scope.exitTest();
+                    stop(function(){
+                        $timeout.flush();
+					    $scope.exitTest();
+                    });
                 }
             }, 20000);
         }
         else{
             if(QuestionsService.quesnum < totalQues){
                 setQuestion();
-                stop();console.log('stopped');
-                changeQuestion(false);
+                stop(function(){
+                    $timeout.flush();
+                    console.log('stopped');
+                    changeQuestion(false);
+                });
             }
             else{
-                stop();
-				$scope.exitTest();
+                stop(function(){
+                    $timeout.flush();
+                    $scope.exitTest();
+                });
             }
         }
     }
